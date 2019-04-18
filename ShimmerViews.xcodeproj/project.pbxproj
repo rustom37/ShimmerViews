@@ -13,6 +13,9 @@
 		AAC4E93A226707BF00731736 /* ShimmerViews.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAC4E938226707BF00731736 /* ShimmerViews.xcdatamodeld */; };
 		AAC4E93C226707C000731736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC4E93B226707C000731736 /* Assets.xcassets */; };
 		AAC4E93F226707C000731736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC4E93D226707C000731736 /* LaunchScreen.storyboard */; };
+		AAC4E9492267130700731736 /* RayShimmerCube.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC4E9482267130700731736 /* RayShimmerCube.swift */; };
+		AAC4E94D226737D500731736 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC4E94C226737D500731736 /* CustomTableViewCell.swift */; };
+		AAC4E94F22675F6F00731736 /* CustomTableViewCellTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC4E94E22675F6F00731736 /* CustomTableViewCellTwo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		AAC4E93B226707C000731736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAC4E93E226707C000731736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAC4E940226707C000731736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAC4E9482267130700731736 /* RayShimmerCube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayShimmerCube.swift; sourceTree = "<group>"; };
+		AAC4E94C226737D500731736 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		AAC4E94E22675F6F00731736 /* CustomTableViewCellTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCellTwo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			children = (
 				AAC4E931226707BF00731736 /* AppDelegate.swift */,
 				AAC4E933226707BF00731736 /* ViewController.swift */,
+				AAC4E94C226737D500731736 /* CustomTableViewCell.swift */,
+				AAC4E94E22675F6F00731736 /* CustomTableViewCellTwo.swift */,
+				AAC4E9482267130700731736 /* RayShimmerCube.swift */,
 				AAC4E935226707BF00731736 /* Main.storyboard */,
 				AAC4E93B226707C000731736 /* Assets.xcassets */,
 				AAC4E93D226707C000731736 /* LaunchScreen.storyboard */,
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC4E94D226737D500731736 /* CustomTableViewCell.swift in Sources */,
+				AAC4E94F22675F6F00731736 /* CustomTableViewCellTwo.swift in Sources */,
 				AAC4E934226707BF00731736 /* ViewController.swift in Sources */,
 				AAC4E932226707BF00731736 /* AppDelegate.swift in Sources */,
+				AAC4E9492267130700731736 /* RayShimmerCube.swift in Sources */,
 				AAC4E93A226707BF00731736 /* ShimmerViews.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
