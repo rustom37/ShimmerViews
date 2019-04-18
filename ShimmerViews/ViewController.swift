@@ -63,13 +63,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCellThree", for: indexPath) as! CustomTableViewCellThree
             
             let cell2 = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as! CustomTableViewCellTwo
-            
-            for subview in cell2.subviews {
-                cell.addSubview(UIView(frame: CGRect(x: subview.center.x,  y: subview.center.y, width: subview.frame.size.width, height: subview.frame.size.height)))
-                
+
+            for subview in cell2.contentView.subviews {
+                cell.contentView.addSubview(UIView(frame: CGRect(x: subview.frame.origin.x,  y: subview.frame.origin.y, width: subview.frame.size.width, height: subview.frame.size.height)))
             }
             
-            for subview in cell.subviews {
+            for subview in cell.contentView.subviews {
                 subview.configureAndStartShimmering()
             }
             

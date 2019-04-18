@@ -17,24 +17,6 @@ class RayShimmerView: UIView {
     
 }
 
-//class RayShimmerLabel: UILabel {
-//
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-////        configureAndStartShimmering()
-//    }
-//
-//}
-//
-//class RayShimmerImageView: UIImageView {
-//
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-////        configureAndStartShimmering()
-//    }
-//
-//}
-
 extension UIView {
       func configureAndStartShimmering() {
         
