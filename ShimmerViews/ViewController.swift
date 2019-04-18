@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let square1 = CGRect(x: 15, y: 0, width: 44, height: 43)
     let square2 = CGRect(x: 170, y: 0, width: 44, height: 43)
     let square3 = CGRect(x: 330, y: 0, width: 44, height: 43)
+    var count = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //MARK: - TableView DataSource Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,7 +60,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             return cell
         } else {
-            fatalError("Couldn't return the proper UIImageViewCell.")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCellThree", for: indexPath) as! CustomTableViewCellThree
+            
+            let cell2 = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as! CustomTableViewCellTwo
+            
+            for subview in cell2.subviews {
+                cell.addSubview(UIView(frame: CGRect(x: subview.center.x,  y: subview.center.y, width: subview.frame.size.width, height: subview.frame.size.height)))
+                
+            }
+            
+            for subview in cell.subviews {
+                subview.configureAndStartShimmering()
+            }
+            
+            return cell
         }
     }
     
@@ -67,13 +81,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.deselectRow(at: indexPath, animated: true)
         
         if indexPath.row == 1 {
-            let cell = tableView.cellForRow(at: indexPath) as! CustomTableViewCellTwo
-            
-            cell.imageExample.image = nil
-            cell.imageExample.configureAndStartShimmering()
-
-            cell.label.text = nil
-            cell.label.configureAndStartShimmering()
+            count += 1
+            let indexPathOfLastRow = NSIndexPath.init(row: count - 1, section: 0)
+            tableView.insertRows(at: [indexPathOfLastRow as IndexPath], with: .bottom)
         }
         
     }

@@ -16,6 +16,7 @@
 		AAC4E9492267130700731736 /* RayShimmerCube.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC4E9482267130700731736 /* RayShimmerCube.swift */; };
 		AAC4E94D226737D500731736 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC4E94C226737D500731736 /* CustomTableViewCell.swift */; };
 		AAC4E94F22675F6F00731736 /* CustomTableViewCellTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC4E94E22675F6F00731736 /* CustomTableViewCellTwo.swift */; };
+		AAEC28792268776A0022F39A /* CustomTableViewCellThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC28782268776A0022F39A /* CustomTableViewCellThree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AAC4E9482267130700731736 /* RayShimmerCube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayShimmerCube.swift; sourceTree = "<group>"; };
 		AAC4E94C226737D500731736 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		AAC4E94E22675F6F00731736 /* CustomTableViewCellTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCellTwo.swift; sourceTree = "<group>"; };
+		AAEC28782268776A0022F39A /* CustomTableViewCellThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCellThree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +66,8 @@
 			children = (
 				AAC4E931226707BF00731736 /* AppDelegate.swift */,
 				AAC4E933226707BF00731736 /* ViewController.swift */,
-				AAC4E94C226737D500731736 /* CustomTableViewCell.swift */,
-				AAC4E94E22675F6F00731736 /* CustomTableViewCellTwo.swift */,
 				AAC4E9482267130700731736 /* RayShimmerCube.swift */,
+				AAEC287A226878C90022F39A /* Custom Cells */,
 				AAC4E935226707BF00731736 /* Main.storyboard */,
 				AAC4E93B226707C000731736 /* Assets.xcassets */,
 				AAC4E93D226707C000731736 /* LaunchScreen.storyboard */,
@@ -74,6 +75,16 @@
 				AAC4E938226707BF00731736 /* ShimmerViews.xcdatamodeld */,
 			);
 			path = ShimmerViews;
+			sourceTree = "<group>";
+		};
+		AAEC287A226878C90022F39A /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AAC4E94C226737D500731736 /* CustomTableViewCell.swift */,
+				AAC4E94E22675F6F00731736 /* CustomTableViewCellTwo.swift */,
+				AAEC28782268776A0022F39A /* CustomTableViewCellThree.swift */,
+			);
+			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +163,7 @@
 				AAC4E934226707BF00731736 /* ViewController.swift in Sources */,
 				AAC4E932226707BF00731736 /* AppDelegate.swift in Sources */,
 				AAC4E9492267130700731736 /* RayShimmerCube.swift in Sources */,
+				AAEC28792268776A0022F39A /* CustomTableViewCellThree.swift in Sources */,
 				AAC4E93A226707BF00731736 /* ShimmerViews.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

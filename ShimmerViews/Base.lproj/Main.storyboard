@@ -72,32 +72,41 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="pineapple" translatesAutoresizingMaskIntoConstraints="NO" id="Gt2-xR-ekh" customClass="RayShimmerImageView" customModule="ShimmerViews" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pineapple" translatesAutoresizingMaskIntoConstraints="NO" id="Gt2-xR-ekh">
                                                     <rect key="frame" x="20" y="4" width="34" height="34"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="34" id="RmC-0q-Pj8"/>
-                                                        <constraint firstAttribute="height" constant="34" id="Y0E-qe-bWT"/>
+                                                        <constraint firstAttribute="width" constant="34" id="52G-qu-u0i"/>
+                                                        <constraint firstAttribute="height" constant="34" id="y4n-nP-uxk"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ray Shimmer Test." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsi-fh-OYa" customClass="RayShimmerLabel" customModule="ShimmerViews" customModuleProvider="target">
-                                                    <rect key="frame" x="62" y="11" width="338" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="338" id="Zlm-wO-MwW"/>
-                                                        <constraint firstAttribute="height" constant="21" id="zAI-0x-kFI"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ray Shimmer Test." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsi-fh-OYa">
+                                                    <rect key="frame" x="146.5" y="11" width="142.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Gt2-xR-ekh" firstAttribute="leading" secondItem="djj-b3-gTr" secondAttribute="leading" constant="20" id="eBL-uR-aVg"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jsi-fh-OYa" secondAttribute="trailing" constant="105" id="4M1-ot-5b7"/>
+                                                <constraint firstItem="Gt2-xR-ekh" firstAttribute="leading" secondItem="djj-b3-gTr" secondAttribute="leading" constant="20" id="6ys-MU-1HM"/>
+                                                <constraint firstItem="jsi-fh-OYa" firstAttribute="top" secondItem="djj-b3-gTr" secondAttribute="topMargin" id="AJ5-P5-fWO"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jsi-fh-OYa" secondAttribute="bottom" constant="1" id="ffd-sZ-rNe"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gt2-xR-ekh" secondAttribute="bottom" constant="5.5" id="lpl-Pz-GuQ"/>
+                                                <constraint firstItem="Gt2-xR-ekh" firstAttribute="top" secondItem="djj-b3-gTr" secondAttribute="top" constant="4" id="rtZ-G7-3JK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imageExample" destination="Gt2-xR-ekh" id="JCI-hc-Dvz"/>
                                             <outlet property="label" destination="jsi-fh-OYa" id="km4-o0-WTY"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customTableViewCellThree" id="fbT-UV-tkj" customClass="CustomTableViewCellThree" customModule="ShimmerViews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="116" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fbT-UV-tkj" id="5kZ-dg-YCS" customClass="CustomTableViewCellThree" customModule="ShimmerViews" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

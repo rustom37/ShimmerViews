@@ -1,18 +1,15 @@
 //
-//  CustomTableViewCellTwo.swift
+//  TableViewCellThree.swift
 //  ShimmerViews
 //
-//  Created by Steve Rustom on 4/17/19.
+//  Created by Steve Rustom on 4/18/19.
 //  Copyright © 2019 Steve Rustom. All rights reserved.
 //
 
 import UIKit
 
-class CustomTableViewCellTwo: UITableViewCell {
+class CustomTableViewCellThree: UITableViewCell {
 
-    @IBOutlet weak var imageExample: RayShimmerImageView!
-    @IBOutlet weak var label: RayShimmerLabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
