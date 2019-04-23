@@ -65,34 +65,51 @@
                                             <outlet property="two" destination="2pN-0Q-EGT" id="9lf-U4-MBe"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customTableViewCellTwo" id="1kI-h3-n8R" userLabel="customTableViewCellTwo" customClass="CustomTableViewCellTwo" customModule="ShimmerViews" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="20" reuseIdentifier="customTableViewCellTwo" rowHeight="75" id="1kI-h3-n8R" userLabel="customTableViewCellTwo" customClass="CustomTableViewCellTwo" customModule="ShimmerViews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1kI-h3-n8R" id="djj-b3-gTr">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pineapple" translatesAutoresizingMaskIntoConstraints="NO" id="Gt2-xR-ekh">
-                                                    <rect key="frame" x="20" y="4" width="34" height="34"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ray Shimmer Test. Two lines label. But now it's three also haha haha haha haha and more more more." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsi-fh-OYa">
+                                                    <rect key="frame" x="122" y="14" width="146" height="47"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="34" id="52G-qu-u0i"/>
-                                                        <constraint firstAttribute="height" constant="34" id="y4n-nP-uxk"/>
+                                                        <constraint firstAttribute="height" constant="47" id="5wv-Yq-m3j"/>
+                                                        <constraint firstAttribute="width" constant="146" id="Uin-d9-kfE"/>
                                                     </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ray Shimmer Test." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsi-fh-OYa">
-                                                    <rect key="frame" x="146.5" y="11" width="142.5" height="21"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJ3-h4-9CB">
+                                                    <rect key="frame" x="352" y="11" width="42" height="53"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="53" id="7CI-as-zLO"/>
+                                                        <constraint firstAttribute="width" constant="42" id="pSc-Op-Esl"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pineapple" translatesAutoresizingMaskIntoConstraints="NO" id="Gt2-xR-ekh">
+                                                    <rect key="frame" x="20" y="11" width="35" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="kdl-yS-Kve"/>
+                                                        <constraint firstAttribute="width" constant="35" id="uyE-Ta-NBk"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="jsi-fh-OYa" secondAttribute="trailing" constant="105" id="4M1-ot-5b7"/>
-                                                <constraint firstItem="Gt2-xR-ekh" firstAttribute="leading" secondItem="djj-b3-gTr" secondAttribute="leading" constant="20" id="6ys-MU-1HM"/>
-                                                <constraint firstItem="jsi-fh-OYa" firstAttribute="top" secondItem="djj-b3-gTr" secondAttribute="topMargin" id="AJ5-P5-fWO"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="jsi-fh-OYa" secondAttribute="bottom" constant="1" id="ffd-sZ-rNe"/>
-                                                <constraint firstAttribute="bottom" secondItem="Gt2-xR-ekh" secondAttribute="bottom" constant="5.5" id="lpl-Pz-GuQ"/>
-                                                <constraint firstItem="Gt2-xR-ekh" firstAttribute="top" secondItem="djj-b3-gTr" secondAttribute="top" constant="4" id="rtZ-G7-3JK"/>
+                                                <constraint firstItem="FJ3-h4-9CB" firstAttribute="leading" secondItem="jsi-fh-OYa" secondAttribute="trailing" constant="84" id="Eif-sx-lS2"/>
+                                                <constraint firstItem="jsi-fh-OYa" firstAttribute="top" secondItem="djj-b3-gTr" secondAttribute="topMargin" constant="3" id="HxC-u1-0UF"/>
+                                                <constraint firstItem="FJ3-h4-9CB" firstAttribute="bottom" secondItem="djj-b3-gTr" secondAttribute="bottomMargin" id="MmJ-IF-b8B"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Gt2-xR-ekh" secondAttribute="bottom" constant="3" id="Rmm-c3-cN2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jsi-fh-OYa" secondAttribute="bottom" constant="3" id="bwh-bw-EW9"/>
+                                                <constraint firstItem="jsi-fh-OYa" firstAttribute="leading" secondItem="Gt2-xR-ekh" secondAttribute="trailing" constant="67" id="fbS-Eg-ru6"/>
+                                                <constraint firstItem="Gt2-xR-ekh" firstAttribute="leading" secondItem="djj-b3-gTr" secondAttribute="leadingMargin" id="rIb-al-fDB"/>
+                                                <constraint firstItem="FJ3-h4-9CB" firstAttribute="top" secondItem="djj-b3-gTr" secondAttribute="topMargin" id="w9a-Jj-qQD"/>
+                                                <constraint firstItem="Gt2-xR-ekh" firstAttribute="top" secondItem="djj-b3-gTr" secondAttribute="topMargin" id="zXM-8h-0FV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -100,11 +117,11 @@
                                             <outlet property="label" destination="jsi-fh-OYa" id="km4-o0-WTY"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customTableViewCellThree" id="fbT-UV-tkj" customClass="CustomTableViewCellThree" customModule="ShimmerViews" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="116" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="20" reuseIdentifier="customTableViewCellThree" rowHeight="75" id="fbT-UV-tkj" customClass="CustomTableViewCellThree" customModule="ShimmerViews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="147" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fbT-UV-tkj" id="5kZ-dg-YCS" customClass="CustomTableViewCellThree" customModule="ShimmerViews" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>

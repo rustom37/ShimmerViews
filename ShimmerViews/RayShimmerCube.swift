@@ -18,13 +18,13 @@ class RayShimmerView: UIView {
 }
 
 extension UIView {
-      func configureAndStartShimmering() {
+    func configureAndStartShimmering() {
         
         backgroundColor = UIColor(red: 170/255, green: 170/255, blue: 170/255, alpha: 0.18)
         startShimmering()
     }
     
-     private func startShimmering() {
+     func startShimmering() {
         
         let light = UIColor(white: 0, alpha: 0.1).cgColor
         let dark = UIColor.black.cgColor
