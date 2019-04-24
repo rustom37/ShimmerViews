@@ -92,7 +92,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pineapple" translatesAutoresizingMaskIntoConstraints="NO" id="Gt2-xR-ekh">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pineapple" translatesAutoresizingMaskIntoConstraints="NO" id="Gt2-xR-ekh">
                                                     <rect key="frame" x="20" y="11" width="35" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="kdl-yS-Kve"/>

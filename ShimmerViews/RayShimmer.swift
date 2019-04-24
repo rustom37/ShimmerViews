@@ -12,20 +12,19 @@ class RayShimmerView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        configureAndStartShimmering()
+        startShimmering()
     }
     
 }
 
 extension UIView {
-    func configureAndStartShimmering() {
-        
-        backgroundColor = UIColor(red: 170/255, green: 170/255, blue: 170/255, alpha: 0.18)
-        startShimmering()
+
+    func startShimmering() {
+        startShimmering(color: UIColor(red: 170/255, green: 170/255, blue: 170/255, alpha: 0.18))
     }
     
-     func startShimmering() {
-        
+    func startShimmering(color: UIColor) {
+        backgroundColor = color
         let light = UIColor(white: 0, alpha: 0.1).cgColor
         let dark = UIColor.black.cgColor
         
@@ -51,7 +50,6 @@ extension UIView {
     }
     
     func stopShimmering() {
-        
         layer.mask = nil
     }
 }

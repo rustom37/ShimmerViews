@@ -62,10 +62,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCellThree", for: indexPath) as! CustomTableViewCellThree
             
-            
-            
             let cell2 = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as! CustomTableViewCellTwo
-
+            
+            var lowestBottomView: UIView? = nil
+            
             for subview in cell2.contentView.subviews {
                 
                 if let label = subview as? UILabel {
@@ -73,18 +73,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let rHeight: Int = lroundf(Float(label.sizeThatFits(textSize).height))
                     let charSize: Int = lroundf(Float(label.font.pointSize))
                     let numberOfLines = rHeight / charSize
-                    
+
                     var y = subview.frame.origin.y
                     for _ in 1...numberOfLines {
-                        let tempView: UIView = UIView(frame: CGRect(x: subview.frame.origin.x,  y: y, width: CGFloat(view.frame.size.width), height: CGFloat(charSize) * 0.7))
+                        let tempView: UIView = UIView(frame: CGRect(x: subview.frame.origin.x,  y: y, width: CGFloat(subview.frame.size.width), height: CGFloat(charSize) * 0.7))
                         tempView.translatesAutoresizingMaskIntoConstraints = false
                         cell.contentView.addSubview(tempView)
                         tempView.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor, constant: subview.frame.origin.x).isActive = true
                         tempView.topAnchor.constraint(equalTo: cell.contentView.topAnchor, constant: y).isActive = true
-                        tempView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor, constant: -10).isActive = true
+                        
+                        if lowestBottomView == nil || ((tempView.frame.origin.y + tempView.frame.size.height) > ((lowestBottomView?.frame.origin.y)! + (lowestBottomView?.frame.size.height)!)) {
+                            lowestBottomView = tempView
+                        }
+                        
                         tempView.widthAnchor.constraint(equalToConstant: subview.frame.size.width).isActive = true
                         tempView.heightAnchor.constraint(equalToConstant: CGFloat(charSize) * 0.7).isActive = true
-                        
+
                         y += CGFloat(charSize)
                     }
                 } else {
@@ -93,25 +97,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     cell.contentView.addSubview(tempView)
                     tempView.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor, constant: subview.frame.origin.x).isActive = true
                     tempView.topAnchor.constraint(equalTo: cell.contentView.topAnchor, constant: subview.frame.origin.y).isActive = true
-                    tempView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor, constant: -10).isActive = true
+                    
+                    if lowestBottomView == nil || ((tempView.frame.origin.y + tempView.frame.size.height) > ((lowestBottomView?.frame.origin.y)! + (lowestBottomView?.frame.size.height)!)) {
+                        lowestBottomView = tempView
+                    }
+                    
                     tempView.widthAnchor.constraint(equalToConstant: subview.frame.size.width).isActive = true
                     tempView.heightAnchor.constraint(equalToConstant: subview.frame.size.height).isActive = true
                 }
             }
+            if let lowestBottomView = lowestBottomView {
+                lowestBottomView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor, constant: -10).isActive = true
+            }
             
             if cell.contentView.subviews.count > 1 {
 
-                cell.backgroundColor = UIColor.white
-                cell.startShimmering()
+                cell.startShimmering(color: UIColor.white)
                 
                 for subview in cell.contentView.subviews {
-                    subview.configureAndStartShimmering()
+                    subview.startShimmering()
                     subview.stopShimmering()
                 }
                 
             } else {
                 for subview in cell.contentView.subviews {
-                    subview.configureAndStartShimmering()
+                    subview.startShimmering()
                 }
             }
             return cell
